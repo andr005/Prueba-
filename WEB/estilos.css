@@ -1,0 +1,256 @@
+/* Estilos para el encabezado */
+.header-container {
+    background-image: url('img/GruCe0bWoAA6F4z.jpg'); /* Especifica la ruta de tu imagen como fondo */
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo horizontal y verticalmente */
+    padding: 0; /* Elimina el espaciado interno del contenedor */
+    text-align: center; /* Alineación del contenido al centro */
+    width: 100%;
+    max-height: 500px;
+    height: 500px; /* Establece la altura del encabezado para ocupar al menos el 100% de la altura de la ventana */
+    display: flex; /* Establece un contenedor flexible para su contenido */
+    flex-direction: column; /* Establece la dirección de apilamiento de los elementos internos */
+    justify-content: center; /* Centra verticalmente el contenido */
+    position: relative;
+}
+.barra-navegacion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6); /* más suave */
+    color: #e1c403ea; /* Color del texto de la barra de navegación */
+    padding: 20px 0;
+    text-align: center;
+        gap: 50px; /* espacio entre links */
+
+    z-index: 2; /* Coloca la barra de navegación sobre el cuadro transparente */
+     font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.division {
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.division:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.imagen1 {
+    display: none; /* Oculta la etiqueta de imagen para que no se muestre en la parte superior de la imagen de fondo */
+}
+
+.cuerpo {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px; /* Espaciado entre las divisiones */
+    background-color: #f9f9f9; /* Color de fondo del cuerpo */
+}
+
+.imagen-container {
+    flex: 1; /* La imagen ocupará el 50% del ancho del cuerpo */
+    margin-right: 20px; /* Espaciado a la derecha de la imagen */
+}
+
+.imagen-container img {
+    max-width: 80%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin estirarla */
+    transition: transform 0.3s;
+}
+
+.contenido-container {
+    flex: 1; /* El contenido ocupará el 50% del ancho del cuerpo */
+}
+
+.titulo-cuerpo {
+    font-size: 40px;
+    color: #f9f9f9;
+    margin-bottom: 20px; /* Espaciado inferior del título */
+    background-color: #8d0303;
+    text-align: center;
+}
+
+.descripcion-cuerpo {
+    font-size: 19px;
+    line-height: 1.5; /* Espaciado entre líneas del párrafo */
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* valor válido */
+    font-style: normal;
+    font-size: 20px;
+}
+
+.peliculas {
+  width: 100%;
+  padding: 40px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 10px; /* espacio entre imágenes */
+  overflow-x: auto; /* permite scroll horizontal */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track img {
+    height: 250px; /* todas iguales */
+    width: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    scroll-snap-align: center;
+}
+
+.carousel-track img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.7);
+}
+/* Estilos para el cuerpo */
+.body-container {
+    font-family: Arial, sans-serif; /* Fuente y familia de fuentes para el texto del cuerpo */
+    background-color: rgb(255, 255, 255); /* Color de fondo del cuerpo */
+    margin: 0; /* Margen exterior del cuerpo */
+    padding: 0; /* Espaciado interno del cuerpo */
+    display: flex; /* Establece un contenedor flexible para su contenido */
+    flex-direction: column; /* Establece la dirección de apilamiento de los elementos internos */
+    min-height: 100vh; /* Altura mínima del cuerpo para ocupar al menos el 100% de la altura de la ventana */
+}
+
+.holamundo {
+    color: rgb(255, 255, 255); /* Color del texto */
+    font-size: 40px; /* Tamaño de fuente */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente y familia de fuentes */
+    text-align: center; /* Alineación del texto al centro */
+    font-weight: bold; /* Grosor de la fuente en negrita */
+}
+
+h2 {
+  margin-bottom: 20px;
+  margin: auto;
+  padding: 30px;
+  font-size: 30px;
+  border-radius: 20px;
+}
+
+.contenedor-videos { 
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.video {
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.video iframe {
+  width: 300px;
+  height: 270px;
+  border-radius: 8px;
+}
+
+.video p {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #343434; /* Color de fondo del pie de página */
+    color: #ffffff; /* Color del texto del pie de página */
+    padding: 20px; /* Espaciado interno del pie de página */
+    text-align: center; /* Alineación del contenido al centro */
+    margin-top: auto; /* Empuja el pie de página hacia abajo para que esté siempre en la parte inferior */
+    display: flex; /* Establece un contenedor flexible para su contenido */
+    justify-content: space-between; /* Distribuye el contenido equitativamente en el espacio disponible */
+}
+
+.footer-section {
+    flex: 1; /* Hace que las secciones del pie de página ocupen el mismo espacio */
+    margin: 0 10px; /* Margen izquierdo y derecho de las secciones */
+}
+
+.footer-section h2 {
+    font-size: 24px; /* Tamaño de fuente */
+}
+
+.footer-section p {
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+.social-links {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Espaciado interno de la lista */
+    margin: 0; /* Margen exterior de la lista */
+    display: flex; /* Establece un contenedor flexible para su contenido */
+    flex-direction: column; /* Establece la dirección de apilamiento de los elementos internos */
+    align-items: center; /* Alinea los elementos al centro horizontalmente */
+}
+
+.social-links li {
+    margin: 5px 0; /* Margen superior e inferior de los elementos de la lista */
+}
+
+.social-links a {
+    color: #fff; /* Color del enlace */
+    text-decoration: none; /* Elimina la decoración de texto subrayado */
+    transition: color 0.3s; /* Agrega una transición suave al color del enlace */
+}
+
+.social-links a:hover {
+    color: #66c2ff; /* Cambia el color del enlace al pasar el cursor */
+}
